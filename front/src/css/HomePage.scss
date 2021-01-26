@@ -1,0 +1,22 @@
+.homePage {
+  &--icon {
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  &--wrapper {
+    flex-wrap: wrap;
+  }
+  &--book {
+    width: 200px;
+    height: 300px;
+  }
+  .homePage--button {
+    margin: 20px auto;
+  }
+  .oneBook--wrapper {
+    width: 200px;
+    margin: 50px 30px;
+  }
+}

@@ -1,0 +1,26 @@
+.onebook--wrapper {
+  margin: 0 auto;
+  width: 300px;
+
+  @media screen and (min-width: 992px) {
+    width: 300px;
+  }
+  img {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.wrapper {
+  flex-wrap: wrap;
+  @media screen and (min-width: 992px) {
+    display: flex;
+  }
+}
+.choiceBook {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px 20px;
+}
