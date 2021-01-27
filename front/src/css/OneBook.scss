@@ -1,6 +1,16 @@
+.onebook {
+  &--delete {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    padding: 2px 5px;
+  }
+}
+
 .onebook--wrapper {
   margin: 0 auto;
   width: 300px;
+  position: relative;
 
   @media screen and (min-width: 992px) {
     width: 300px;
