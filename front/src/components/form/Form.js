@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../css/Form.scss";
 import { withRouter } from "react-router-dom";
+import { removeBook } from "../../actions/bookActions";
 
 class Form extends Component {
   state = {
@@ -133,4 +134,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, null)(Form));
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeBook: () => dispatch(removeBook()),
+  };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Form));

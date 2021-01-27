@@ -12,6 +12,12 @@ const bookReducer = (state = initState, action) => {
         return newState;
       }
       break;
+    case "REMOVE_BOOK":
+      newState = {
+        ...state,
+        addOne: action.data,
+      };
+      return newState;
     default:
       return state;
   }

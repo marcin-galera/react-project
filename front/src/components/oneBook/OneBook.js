@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "../../css/OneBook.scss";
+import { removeBook } from "../../actions/bookActions";
 
 class OneBook extends Component {
   state = {
@@ -27,15 +28,14 @@ class OneBook extends Component {
   }
 
   handleDelete = (id) => {
-    console.log(id);
-    console.log(this.state.book);
-
     const newBooks = this.state.book.filter((oneBook) => {
       return oneBook.id !== id;
     });
     this.setState({
       book: [...newBooks],
     });
+
+    this.props.removeBook(id);
   };
 
   render() {
@@ -80,4 +80,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(OneBook);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeBook: (id) => dispatch(removeBook(id)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(OneBook);
